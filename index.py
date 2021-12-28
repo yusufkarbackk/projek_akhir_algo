@@ -1,6 +1,7 @@
-file = open('names.txt', 'a+')
-nama = input('Masukan nama anda: ')
+import db_helper
 
-file.write(nama + "\n")
-file.close()
+nama = input('masukan nama anda: ')
+nim = int(input('masukan nim: '))
+prodi = input('masukan prodi: ')
 
+db_helper.insert_mahasiswa(nama, nim, prodi)
